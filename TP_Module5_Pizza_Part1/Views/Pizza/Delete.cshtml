@@ -1,0 +1,14 @@
+﻿@model TPModule5_2_Bo.Pizza
+<h2>Suppression d'une pizza<h2>
+
+<h3>Êtes-vous sur de vouloir supprimer la pizza " @Html.DisplayFor(model => model.Nom)"?</h3>
+<div>
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+    <div class="form-actions no-color">
+        <input type="submit" value="Supprimer" class="btn btn-default" /> |
+        @Html.ActionLink("Retour sur la liste", "Index")
+    </div>
+    }
+</div>
